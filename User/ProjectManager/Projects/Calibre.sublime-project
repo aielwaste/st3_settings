@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Applications/calibre.app/Contents",
+            "file_include_patterns": [],
+            "folder_include_patterns": [],
+            "folder_exclude_patterns": [],
+            "folder_exclude_patterns": ["_CodeSignature"],
+            "follow_symlinks": true
+		}
+	]
+}

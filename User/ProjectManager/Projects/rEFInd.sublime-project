@@ -1,0 +1,23 @@
+{
+  "folders":
+  [
+    {
+      "name": "rEFInd",
+      "path": "/Users/fr1v/github/rEFInd",
+      "file_exclude_patterns": ["*.log","CONTRIBUTING.md",".gitignore"],
+      "folder_exclude_patterns": ["log"],
+      "follow_symlinks": true
+    }
+  ],
+  "settings":
+  {
+    "tab_size": 2
+  },
+  "build_systems":
+  [
+    {
+      "name": "List",
+      "cmd": ["ls -lahbFk --color=auto --group-directories-first"]
+    }
+  ]
+}

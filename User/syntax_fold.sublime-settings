@@ -1,0 +1,29 @@
+{
+    "config":[
+        {
+            "scope": "source.java",
+            "startMarker": "//region",
+            "endMarker":"//endregion"
+        },
+        {
+            "scope": "source.cs",
+            "startMarker":"#region",
+            "endMarker":"#endregion"
+        },
+        {
+            "scope": "source.c++, source.c",
+            "startMarker":"#pragma region",
+            "endMarker":"#pragma endregion"
+        },
+        {
+            "scope": "source.shell",
+            "startMarker":"#region",
+            "endMarker":"#endregion"
+        },
+        {
+            "scope": "source.sublime-settings, source.sublime-menu, source.sublime-project, source.sublime-commands",
+            "startMarker":"//region",
+            "endMarker":"//endregion"
+        }
+    ]
+}

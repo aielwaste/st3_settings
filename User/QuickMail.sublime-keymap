@@ -1,0 +1,4 @@
+[
+  { "keys": [ "alt+super+m" ], "command": "mail_write", "args": {} },
+  { "keys": [ "shift+super+enter" ], "command": "mail_send", "args": {} }
+]

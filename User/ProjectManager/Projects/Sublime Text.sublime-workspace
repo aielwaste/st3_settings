@@ -1,0 +1,786 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inst",
+				"install_windows_dotfiles"
+			],
+			[
+				"in",
+				"install_macos_dotfiles"
+			],
+			[
+				"N",
+				"NODENV_ROOT"
+			],
+			[
+				"pyenv",
+				"pyenv-virtualenv"
+			],
+			[
+				"insta",
+				"install_gnu_macos"
+			],
+			[
+				"HOM",
+				"HOMEBREW_EDITOR"
+			],
+			[
+				"_",
+				"___ORGANIZATIONNAME___"
+			],
+			[
+				"___",
+				"___FULLUSERNAME___"
+			],
+			[
+				"HOME",
+				"HOMEBREW_GITHUB_API_TOKEN"
+			],
+			[
+				"XD",
+				"XDG_DATA_HOME"
+			],
+			[
+				"SUB",
+				"SUBL_PROJECTS"
+			],
+			[
+				"TM_H",
+				"TM_HG_EXT_DIFF"
+			],
+			[
+				"TM_SV",
+				"TM_SVN_DIFF_CMD"
+			],
+			[
+				"SUBL_",
+				"SUBL_PROJECTS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/fr1v/.config/sublime-text-3/Packages/User/YAML.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 59,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 342.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"title",
+				"Convert Case: Title Case"
+			],
+			[
+				"RegReplace: re",
+				"RegReplace: Remove Trailing (Years)"
+			],
+			[
+				"markdown",
+				"Set Syntax: Github Flavored Markdown"
+			],
+			[
+				"markdownl",
+				"Markdown: Choose Default Markdown Style"
+			],
+			[
+				"alignment",
+				"Preferences: Alignment File Settings – Syntax Specific – User"
+			],
+			[
+				"extr",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"generic",
+				"Set Syntax: Generic Config"
+			],
+			[
+				"shells",
+				"Set Syntax: ShellScript Improved"
+			],
+			[
+				"key",
+				"FindKeyConflicts: All Key Maps to Buffer"
+			],
+			[
+				"markdownlive",
+				"MarkdownLivePreview: Edit Custom CSS File"
+			],
+			[
+				"python",
+				"Set Syntax: PythonImproved"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Markdown",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Set Syntax: Markdo",
+				"Set Syntax: Github Flavored Markdown"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markdownEditing: ",
+				"MarkdownEditing: Markdown Lint"
+			],
+			[
+				"foot",
+				"MarkdownEditing: Magic Footnotes Command"
+			],
+			[
+				"markdowne",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"convert",
+				"Serialized Data Converter: YAML to JSON"
+			],
+			[
+				"packagedev:",
+				"PackageDev: Convert to YAML and Rearrange Syntax Definition"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"sublime se",
+				"Set Syntax: Sublime Settings"
+			],
+			[
+				"remove d",
+				"RegReplace: Remove Dangling Commas"
+			],
+			[
+				"remove dan",
+				"RegReplace: Remove Dangling Commas"
+			],
+			[
+				"regreplace:",
+				"RegReplace: Show Edit Panel"
+			],
+			[
+				"togg",
+				"Toggle ScopeAlways"
+			],
+			[
+				"xml",
+				"Set Syntax: TextMate Preferences (PList / XML)"
+			],
+			[
+				"syntax test",
+				"Build With: Syntax Tests - Regex Compatibility"
+			],
+			[
+				"upg",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"sublime sett",
+				"Set Syntax: Sublime Settings"
+			],
+			[
+				"form",
+				"Format: Prettify"
+			],
+			[
+				"prett",
+				"Format: Prettify"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"format",
+				"Format: Prettify"
+			],
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
+			[
+				"markdownt",
+				"MarkdownTOC:Insert TOC"
+			],
+			[
+				"markdown ed",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"ext",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"ex",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"JSON",
+				"Set Syntax: Laravel Echo (JSON)"
+			],
+			[
+				"newr",
+				"PackageDev: New Raw Snippet"
+			],
+			[
+				"packager",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"tasks",
+				"Set Syntax: Tasks"
+			],
+			[
+				"send",
+				"Gmail: Send As Mail"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python3"
+			],
+			[
+				"gmail",
+				"Gmail: Send As Mail"
+			],
+			[
+				"shel",
+				"Set Syntax: ShellScript Improved"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"gitig",
+				"Set Syntax: Git Ignore"
+			],
+			[
+				"sync",
+				"Sync Settings: Upload"
+			],
+			[
+				"shell",
+				"Set Syntax: ShellScript Improved"
+			],
+			[
+				"shellsc",
+				"Set Syntax: ShellScript"
+			],
+			[
+				"extra",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"shell co",
+				"ShellCommand"
+			],
+			[
+				"toggl",
+				"Toggle ScopeAlways"
+			],
+			[
+				"upload",
+				"Sync Settings: Upload"
+			],
+			[
+				"ini",
+				"Set Syntax: INI"
+			],
+			[
+				"ig",
+				"Set Syntax: Git Ignore"
+			],
+			[
+				"extract",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"she",
+				"Set Syntax: ShellScript Improved"
+			]
+		],
+		"width": 550.0
+	},
+	"console":
+	{
+		"height": 203.0,
+		"history":
+		[
+			"import tempfile; print(tempfile.gettempdir())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/fr1v/.config/sublime-text-3/Packages/User/ProjectManager/Projects/Sublime Text.sublime-project",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ApplySyntax.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/MultiMarkdown.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/RegReplace[Sublime Text].md",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/lint_docs/README.md",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/reg_replace_rules.sublime-settings",
+		"/Users/fr1v/.zshrc",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/RegReplace/reg_replace_rules (example).sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Default.sublime-commands",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Macros/convert-to-tabs-4.sublime-macro",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Default/Indentation.sublime-menu",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/SideBar.py",
+		"/Users/fr1v/Library/Preferences/calibre/global.py",
+		"/Users/fr1v/Library/Preferences/calibre/customize.py",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/RegReplace/Default.sublime-commands",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Default (OSX).sublime-keymap",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/GenericConfig.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/fr1v/Dropbox/code/CSS/Marked2/UpstandingCitizen.css",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/MarkdownLivePreview.css",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Terminal/Base File.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/python-markdown/dependencies.json",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/PackageDev/Package/Sublime Text Mousemap/Sublime Mouse Map.YAML-tmLanguage",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/PackageDev/Package/Sublime Text Build System/Sublime Text Build System.YAML-tmLanguage",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ApplySyntax.ext-list",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/languages/Better ZSH/zsh.tmLanguage",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Bold and Italic Markers.tmPreferences",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/MarkdownLivePreview/MarkdownLivePreview.py",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/python-markdown/st3/markdown/extensions/html-tidy.py",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/MultiMarkdown.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Languages/Better ZSH/zsh.YAML-tmLanguage",
+		"/Users/fr1v/Dropbox/Notes/regex_cheat_sheet.md",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/languages/Better ZSH/zsh.YAML-tmLanguage",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/Sublime Text 3.sublime-project",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/RegReplace/reg_replace.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/RegReplace/rr_notify.py",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/reg_replace.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/fr1v/.dotfiles/sublime/User/zsh.sublime-build",
+		"/Users/fr1v/.sublimelinterrc",
+		"/Users/fr1v/.zpreztorc",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/0_package_control_loader/dependency-metadata.json",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/PackageDev/Package/Convert to ....sublime-build",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/ShellScript/dependencies.json",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/SyntaxFold/syntax_fold.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Macros/2_to_4_Spaces.sublime-macro",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Snippets/PackageDev/folder.sublime-snippet",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Snippets/sass/span-columns.sublime-snippet",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Snippets/sass/selectorcomment.sublime-snippet",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Snippets/sass/partialcomment.sublime-snippet",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Snippets/scss/bracket.sublime-snippet",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/Dotfiles.sublime-project",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/Prezto.sublime-project",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/User.sublime-commands",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/project_manager.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/ProjectManager/project_manager.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/~/.dotfiles",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/~/.dotfiles/prezto",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/~/.dotfiles/config/nvim",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/~/.dotfiles/config",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/~/.scripts",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/ProjectManager/Projects/~/.dotfiles/misc",
+		"/Users/fr1v/Dropbox/bin/distrodetect.sh",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/RSync/RSync.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Terminal/Default (OSX).sublime-keymap",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/DashDoc/DashDoc.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/PlainTasks.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/PlainTasks/PlainTasks (OSX).sublime-settings",
+		"/Users/fr1v/.ssh/known_hosts",
+		"/Users/fr1v/.zprofile",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/QuickMail.sublime-keymap",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/QuickMail.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Gmail/QuickMail.sublime-keymap",
+		"/Users/fr1v/Downloads/iptorrents.py",
+		"/Users/fr1v/Downloads/iptorrents_search.py",
+		"/Users/fr1v/.dotfiles/scripts/install/install_dotfiles.sh",
+		"/Users/fr1v/.dotfiles/scripts/install/homebrew.sh",
+		"/Users/fr1v/Downloads/installer.sh",
+		"/Users/fr1v/.dotfiles/prezto/modules/utility/init.zsh",
+		"/Users/fr1v/.zprezto/modules/utility/functions/exists",
+		"/Users/fr1v/Dropbox/bin/archeyp",
+		"/Users/fr1v/.dotfiles/prezto.bak/runcoms/zpreztorc",
+		"/Users/fr1v/.dotfiles/prezto.bak/runcoms/zshenv",
+		"/Users/fr1v/.dotfiles/prezto.bak/runcoms/zshrc",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/copy-to-the-beginning-of-the-line.sublime-macro",
+		"/Users/fr1v/.dotfiles/prezto/.gitmodules",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/ClearLine.sublime-macro",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/cool_brackets.sublime-macro",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/2_to_4_Spaces.sublime-macro",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/convert-to-tabs-4.sublime-macro",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/DeleteLineFinishWithTab.sublime-macro",
+		"/Users/fr1v/Dropbox/bin/install_fira_nerd_fonts.sh",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/EndOfLineSemicolon.sublime-macro",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/identation_macro.sublime-macro",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/to-2.sublime-macro",
+		"/Users/fr1v/Desktop/sublime.old/Packages/User/Macros/to-4.sublime-macro",
+		"/Users/fr1v/dotfiles",
+		"/Users/fr1v/.zprezto/runcoms/zprofile",
+		"/Applications/MacVim.app/Contents/Resources/vim/vimrc",
+		"/Users/fr1v/.dotfiles/prezto/modules/osx/init.zsh",
+		"/Users/fr1v/.dotfiles/prezto/modules/osx/alias.suffix.zsh",
+		"/Users/fr1v/.vimrc",
+		"/Applications/MacVim.app/Contents/Resources/vim/.deps/usr/etc/luarocks/config-5.1.lua",
+		"/Applications/MacVim.app/Contents/Resources/vim/bundle/newL9/plugin/l9.vim",
+		"/Users/fr1v/.zprezto/runcoms/zshenv",
+		"/Users/fr1v/.secrets",
+		"/Users/fr1v/Library/Fonts/SourceCodePro+Powerline+Awesome+Regular.sh",
+		"/Users/fr1v/Library/Fonts/Inconsolata+Awesome.sh",
+		"/Users/fr1v/Library/Fonts/Droid+Sans+Mono+Awesome.sh",
+		"/Users/fr1v/.dotfiles/prezto/runcoms/zprofile",
+		"/Users/fr1v/.github/shougo-s-github/.git/sourcetreeconfig",
+		"/Users/fr1v/.github/shougo-s-github/.git/config",
+		"/Users/fr1v/.zprezto/runcoms/zpreztorc",
+		"/Users/fr1v/.zprezto/runcoms/zshrc",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/projectmanager/projects/Dotfiles.sublime-project",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Default (Linux).sublime-keymap",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/Users/fr1v/Library/Application Support/Sublime Text 3/Packages/FindKeyConflicts/FindKeyConflicts.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 94.0,
+		"where_history":
+		[
+			"<project>",
+			"*.sublime-commands"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"wrap_width\": 80,",
+			"    { \"",
+			"\"args\": {",
+			"Edit Regular Expression Rule",
+			"clear High",
+			"unexpand_tabs",
+			"file",
+			"+m]",
+			"^\\s\\[",
+			"^\\t\\s",
+			"support.function.builtin.shell",
+			"&amp&amp;",
+			"&amp|",
+			"(<<<)",
+			"(<<)",
+			"|&|",
+			"|&&|",
+			"&&",
+			"<string>(?<",
+			":[\\s][\\s]",
+			"(^\\*\\*`)([^\\s]+)(\\s*)",
+			"`:",
+			"  ",
+			"    ",
+			"] ",
+			"/Users/fr1v",
+			"${USER_HOME}",
+			"${ROOT_HOME}",
+			"%20",
+			"Light",
+			"\"",
+			"[",
+			" =====",
+			"# =====",
+			"include",
+			"syntax en",
+			";",
+			"install",
+			" ",
+			"✔(\\s)*",
+			"\"${HOME}/",
+			"# ",
+			"$pbz",
+			"$1",
+			"export ",
+			"://"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"wrap_width\": 100,",
+			"    {\"\\t\\n",
+			"    {\\n",
+			"\"args\":{",
+			"[",
+			"\\t",
+			"&amp;&amp;",
+			"&amp;|",
+			"(&lt;&lt;&lt;)",
+			"(&lt;&lt;)",
+			"|&amp|",
+			"|&amp&amp|",
+			"&amp&amp",
+			"&amp",
+			"<string>(?&lt;",
+			": ",
+			":[\\s] ",
+			"$1$2`\\*\\*:  ",
+			"$1$2\\*\\*:  ",
+			"$1\\*\\*:  ",
+			"`:**",
+			" ",
+			"  ",
+			"]`: ",
+			"]` ",
+			"~",
+			"$USER_HOME",
+			"$ROOT_HOME",
+			"",
+			"Bold",
+			"Regular",
+			"Retina",
+			"'",
+			"\\n#\\n",
+			"\\n#",
+			"#",
+			"exclude",
+			",",
+			"reinstall",
+			"\\nbrew install ",
+			"",
+			" ",
+			"\"${HOME}\"/",
+			"#=== ",
+			"7za",
+			"$filename",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/fr1v/.config/sublime-text-3/Packages/User/YAML.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 59,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"git_savvy.file_path": "/home/fr1v/.dotfiles/sublime-text/User/YAML.sublime-settings",
+							"git_savvy.repo_path": "/home/fr1v/.dotfiles/sublime-text",
+							"platform_settings_was_here": true,
+							"syntax": "Packages/PackageDev/Package/Sublime Text Settings/Sublime Settings.tmLanguage",
+							"syntax_mgr_loaded": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 27.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 116.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.package_dev":
+	{
+		"height": 298.0
+	},
+	"pinned_build_system": "Packages/PackageDev/Package/Convert to ....sublime-build",
+	"project": "Sublime Text 3.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,18 @@
+{
+    "extensions":
+    [
+        "bundles",
+        "vimrc.local",
+        "vimrc",
+        "vim.bundle.local",
+        "vim.local",
+        "inputrc",
+        "vim",
+        "vimL",
+        "bundle",
+        "editrc",
+        "viminfo"
+    ],
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true
+}

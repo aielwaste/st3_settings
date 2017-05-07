@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+{
+    "name": "${1}",
+    "path": "${2}",
+    "file_include_patterns": [],
+    "folder_include_patterns": [],
+    "file_exclude_patterns": [],
+    "folder_exclude_patterns": [],
+    "follow_symlinks": true
+}
+]]></content>
+	<tabTrigger>folder</tabTrigger>
+	<description>new folder in project</description>
+	<scope>source.sublime-settings</scope>
+</snippet>

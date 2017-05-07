@@ -1,0 +1,615 @@
+<snippet>
+	<content><![CDATA[
+#!/bin/bash
+################################################################################
+#                ____                     _ __                                 #
+#     ___  __ __/ / /__ ___ ______ ______(_) /___ __                           #
+#    / _ \/ // / / (_-</ -_) __/ // / __/ / __/ // /                           #
+#   /_//_/\_,_/_/_/___/\__/\__/\_,_/_/ /_/\__/\_, /                            #
+#                                            /___/ team                        #
+#                                                                              #
+# blackman - Emerge for Blackarch                                              #
+#                                                                              #
+# FILE                                                                         #
+# blackman.sh                                                                  #
+#                                                                              #
+# DATE                                                                         #
+# 2013-12-20                                                                   #
+#                                                                              #
+# DESCRIPTION                                                                  #
+# Download and compile packages as Emerge does                                 #
+#                                                                              #
+# AUTHOR                                                                       #
+# nrz@nullsecurity.net                                                         #
+# noptrix@nullsecurity.net                                                     #
+#                                                                              #
+################################################################################
+
+
+# blackman version
+VERSION="blackman v0.5.7.4"
+
+# url blackarch repository
+REMOTE_REPO="https://github.com/BlackArch/blackarch.git"
+
+# copy of the blackarch repository
+LOCAL_REPO="${HOME}/.blackarch"
+
+# meta directory for metadata files
+META="${LOCAL_REPO}/meta"
+
+# world file to follow pkg installed
+WORLD="${LOCAL_REPO}/meta/world"
+
+# groups file
+GROUPS_FILE="${LOCAL_REPO}/docs/groups"
+
+# blackarch packages location
+REPO_PKGS="${LOCAL_REPO}/packages"
+
+# error log
+ERROR_LOG="${LOCAL_REPO}/meta/errors"
+
+# temporal directory for install packages
+TMP_DIR_INSTALL="/tmp"
+
+# directory for sort tools
+if [ "${UID}" == "0" ]; then
+    SORT_TOOLS_DIR="/root/haxx"
+else
+    SORT_TOOLS_DIR="/home/${USER}/haxx"
+fi
+
+# true / false
+FALSE="0"
+TRUE="1"
+
+# return codes
+SUCCESS="0"
+FAILURE="1"
+
+# verbose mode - default: quiet
+VERBOSE="/dev/null"
+
+# colors
+WHITE="$(tput bold ; tput setaf 7)"
+GREEN="$(tput setaf 2)"
+RED="$(tput bold; tput setaf 1)"
+YELLOW="$(tput bold ; tput setaf 3)"
+GREY="$(tput bold ; tput setaf 0)"
+NC="$(tput sgr0)" # No Color
+
+
+wprintf() {
+    fmt=${1}
+    shift
+    printf "%s${fmt}%s\n" "${WHITE}" "$@" "${NC}"
+
+    return "${SUCCESS}"
+}
+
+gprintf() {
+    fmt=${1}
+    shift
+    printf "%s${fmt}%s\n" "${GREY}" "$@" "${NC}"
+
+    return "${SUCCESS}"
+}
+
+
+# print warning
+warn()
+{
+    fmt=${1}
+    shift
+    printf "%s[!] WARNING: ${fmt}%s\n" "${RED}" "${@}" "${NC}"
+
+    return "${SUCCESS}"
+}
+
+# print error and exit
+err()
+{
+    fmt=${1}
+    shift
+    printf "[-] ERROR: ${fmt}\n" "${@}" >> "${ERROR_LOG}"
+    printf "%s[-] ERROR: ${fmt}%s\n" "${RED}" "${@}" "${NC}"
+
+    return "${FAILURE}"
+}
+
+# print error and exit
+cri()
+{
+    fmt=${1}
+    shift
+    printf "[-] CRITICAL: ${fmt}%s\n" "${@}" >> "${ERROR_LOG}"
+    printf "%s[-] CRITICAL: ${fmt}%s\n" "${RED}" "${@}" "${NC}"
+
+    exit "${FAILURE}"
+}
+
+
+# usage and help
+usage()
+{
+    printf "%s" "${WHITE}"
+
+    cat <<EOF
+Usage: ${0##*/} [options] | <misc>
+
+OPTIONS:
+
+    PACKAGES:
+    -s <pkg>: search package
+    -i <pkg>: download, compile and install package
+    -g <group>: install all packages inside a blackarch group
+    -a: install all packages from all groups
+
+    REPOSITORY:
+    -l: list blackarch groups
+    -p <group>: list packages from group
+    -u: update blackarch repository
+
+    SORT TOOLS:
+    -h: sort tools into main directory [${SORT_TOOLS_DIR} default]
+    -D <dir>: change default main directory
+
+    FLAGS:
+    -f: force
+
+    MISC:
+    -V: blackman version
+    -H: this
+
+EOF
+
+    printf "%s" "${NC}"
+
+    return "${SUCCESS}"
+}
+
+
+# leet banner, very important
+banner()
+{
+    printf "%s--==[ blackman - BlackArch ]==--%s\n" "${YELLOW}" "${NC}"
+
+    return "${SUCCESS}"
+}
+
+
+# check argument count
+check_argc()
+{
+    return "${SUCCESS}"
+}
+
+
+# check if required arguments were selected
+check_args()
+{
+    return "${SUCCESS}"
+}
+
+ask_pkg_install()
+{
+    pkg=${1}
+
+    printf "%s" "${WHITE}"
+
+    printf "[?] About to install %s [Y/n]: " "${pkg}"
+    read a
+    if [ "${a}" == "n" ] || [ "${a}" == "N" ]; then
+        ret=${FAILURE}
+    else
+        ret=${SUCCESS}
+    fi
+
+    printf "%s" "${NC}"
+
+    return "${ret}"
+
+}
+
+check_env()
+{
+    if [ -f /var/lib/pacman/db.lck ]; then
+        cri "Pacman locked - rm /var/lib/pacman/db.lck"
+    fi
+
+    command -v strip >/dev/null 2>&1 ||
+        err "Blackman needs binutils to work" ||
+        if ask_pkg_install "binutils"; then
+            if [ "$EUID" != "0" ]; then
+                sudo pacman -S binutils --noconfirm
+            else
+                pacman -S binutils --noconfirm
+            fi
+        fi
+
+    command -v make >/dev/null 2>&1 ||
+        err "Blackman needs base-devel to work" ||
+        if ask_pkg_install "base-devel"; then
+            if [ "$EUID" != "0" ]; then
+                sudo pacman -S base-devel --noconfirm
+            else
+                pacman -S base-devel --noconfirm
+            fi
+        fi
+
+    command -v svn >/dev/null 2>&1 ||
+        err "Blackman needs Subversion to work" ||
+        if ask_pkg_install "subversion"; then
+            if [ "$EUID" != "0" ]; then
+                sudo pacman -S subversion --noconfirm
+            else
+                pacman -S subversion --noconfirm
+            fi
+        fi
+
+    command -v git >/dev/null 2>&1 ||
+        err "Blackman needs git to work" ||
+        if ask_pkg_install "git"; then
+            if [ "$EUID" != "0" ]; then
+                sudo pacman -S git --noconfirm
+            else
+                pacman -S git --noconfirm
+            fi
+        fi
+
+    return "${SUCCESS}"
+}
+
+# check if its first time for blackman and set everything up
+check_init()
+{
+    printf "%s" "${WHITE}"
+    # check blackarch repository
+    if ! [ -d "${LOCAL_REPO}" ]; then
+        printf "[+] First Blackman Init - Setting up... \n\n"
+        cd "${HOME}"
+        git clone "${REMOTE_REPO}" "${LOCAL_REPO}"
+    fi
+
+    if ! [ -d "${META}" ]; then
+        mkdir -p "${META}"
+        printf "[+] Creating meta directory...\n"
+    fi
+
+    ! [ -f "${WORLD}" ] && touch "${WORLD}"
+
+    printf "%s" "${NC}"
+
+    return "${SUCCESS}"
+}
+
+
+search()
+{
+    pkg=${1}
+    local found="${FAILURE}"
+
+    find "${REPO_PKGS}/" -name PKGBUILD | ( while read -r; do
+            package=$(local _var=${REPLY%/*}; echo "${_var##*/}")
+            if [[ "${package}" =~ "${pkg}" ]]; then
+                found="${SUCCESS}"
+                wprintf "[+] %s" "${package}"
+                gprintf "\t%s" "$(cat "${REPLY}"|grep "pkgdesc"|cut -d"=" -f2|sed 's/^.\(.*\).$/\1/')"
+            elif grep pkgdesc "${REPLY}"| grep -qi "${pkg}"; then
+                found="${SUCCESS}"
+                wprintf "[+] %s" "$(local _var=${REPLY%/*}; echo "${_var##*/}")"
+                gprintf "\t%s" "$(cat "${REPLY}"|grep "pkgdesc"|cut -d"=" -f2|sed 's/^.\(.*\).$/\1/')"
+            fi
+        done
+        [ "${found}" == "${FAILURE}" ] && err "Package \'%s\' not found" "${pkg}"
+     )
+
+    return "${found}"
+}
+
+compare_version()
+{
+    test "$(echo "$@" | tr " " "\n" | sort -V | head -n 1)" != "$1";
+}
+
+# return SUCCESS if already installed and FAILURE otherwise
+check_pkg()
+{
+    pkg=${1}
+
+    if grep -q "${pkg}" "${WORLD}"; then
+        wprintf "[+] Package %s already installed" "${pkg}"
+        ver_PKGBUILD=$(grep "pkgver=" "${REPO_PKGS}/${pkg}/PKGBUILD" |sed "s/pkgver=//;s/'//g")
+        ver_installed=$(pacman -Qi "${pkg}" 2>/dev/null|grep "Version"|cut -d":" -f2|sed 's/ //g;s/-.*//')
+        [ "${ver_installed}"  == "" ] && return "${FAILURE}" # not installed
+        if [ "${ver_PKGBUILD}" == "${ver_installed}" ]; then
+            wprintf "[+] Package %s up to date (v%s) \n  %s" "${pkg}" "${ver_PKGBUILD}" "${FORCE- ** reinstall with -f arg}"
+            return "${SUCCESS}"
+        else
+            wprintf "[+] Installing update version for package %s" "${pkg}"
+            wprintf "[+] Version update from %s -> %s" "${ver_installed}" "${ver_PKGBUILD}"
+            return "${FAILURE}"
+        fi
+    fi
+
+    # pkg isnt inside world file - not installed
+    return "${FAILURE}"
+}
+
+
+install_pkg()
+{
+    pkg=${1}
+    pacman_version=$(pacman -Qi "pacman" 2>/dev/null|grep "Version"|cut -d":" -f2|sed 's/ //g;s/-.*//')
+    pacman_extra=${2-""}
+
+
+    if [ -d "${REPO_PKGS}/${pkg}" ]; then
+        # check if pkg already installed with same version from repository
+        if check_pkg "${pkg}" && [ -z "${FORCE}" ]; then
+            return "${SUCCESS}"
+        fi
+
+	    cp -R "${REPO_PKGS}/${pkg}" "${TMP_DIR_INSTALL}"
+	    cd "${TMP_DIR_INSTALL}/${pkg}"
+
+        # check and resolve dependencies with blackarch packages
+        if grep -q "^depends=" PKGBUILD; then
+            grep "^depends=" PKGBUILD | sed "s/depends=(//;s/)//;s/'//g;s/ /\n/g"|
+                while read -r; do
+                    if [ -d "${REPO_PKGS}/${REPLY}" ]; then
+                        wprintf "[+] BlackArch dependencies detected - Installing..."
+                        install_pkg "${REPLY}" "--noconfirm --needed"
+                    fi
+                done
+        fi
+
+        if compare_version ${pacman_version} "4.2"; then
+	    if [[ ${UID} -eq 0 ]]; then
+	        cri "blackman must not be run as root"
+            else
+	        makepkg -sf --noconfirm
+	    fi
+	else
+	    if [[ ${UID} -ne 0 ]]; then
+	        makepkg -sf --noconfirm
+	    else
+	        makepkg -sf --asroot --noconfirm
+	    fi
+	fi
+        [ "${?}" != "0" ] && warn "Something wrong with makepkg: %s" "${pkg}"
+        sudo pacman -U *.xz ${pacman_extra}
+
+        # cleaning up
+	    rm -rf "${TMP_DIR_INSTALL}/${pkg}"
+
+        ! grep -q "${pkg}" "${WORLD}" && printf "%s\n" "${pkg}" >> "${WORLD}"
+    else
+        cri "Package not found in repository \'%s\'" "${pkg}"
+    fi
+
+    return "${SUCCESS}"
+}
+
+install_group()
+{
+    # TODO: get count of packages - ask if install all
+    group=$1
+
+    # fix blackarch- prefix
+    ! printf "%s" "${group}" | grep -q "blackarch" && group="blackarch-${group}"
+
+    wprintf "[+] Installing %s group" "${group}"
+
+    if grep -q "^$group$" "${GROUPS_FILE}"; then
+        grep -lr "$group" "${REPO_PKGS}" | while read -r; do
+            # TODO: nicer?
+            rm_file=$(printf "%s" "${REPLY}"|sed 's/\/PKGBUILD//')
+            wprintf "[+] Installing %s package" "${rm_file##*/}"
+            install_pkg "${rm_file##*/}" "--noconfirm --needed"
+        done
+    else
+        cri "Group \'%s\' does not exist" "${group}"
+    fi
+
+    return "${SUCCESS}"
+}
+
+install_all()
+{
+    install_group "blackarch"
+
+    return "${SUCCESS}"
+}
+
+list_groups()
+{
+    while read -r; do
+        wprintf "[+] %s" "${REPLY}"
+    done < "${GROUPS_FILE}"
+
+    return "${SUCCESS}"
+}
+
+list_pkgs_from_group()
+{
+    group=$1
+    found="false"
+
+    # fix blackarch- prefix
+    ! printf "%s" "${group}" | grep -q "blackarch-" && group="blackarch-${group}"
+
+    if grep -q "${group}" "${GROUPS_FILE}"; then
+        grep "${group}" -rl "${REPO_PKGS}"|grep PKGBUILD| ( while read -r; do
+            found="true"
+            path_no_pkgbuild=$(printf "%s" "${REPLY}"| sed 's/\/PKGBUILD//')
+            wprintf "[+] %s" "${path_no_pkgbuild##*/}"
+            gprintf "\t%s" "$(cat "${REPLY}"|grep "pkgdesc"|cut -d"=" -f2|sed 's/^.\(.*\).$/\1/')"
+        done
+        [ "${found}" == "false" ] && err "Not packets found for group \'%s\'" "${group}"
+        )
+    else
+        cri "Group %s not found" "${group}"
+    fi
+
+    return "${SUCCESS}"
+}
+
+update_system()
+{
+    #check date
+    return "${SUCCESS}"
+}
+
+update_repo()
+{
+    printf "%s" "${WHITE}"
+
+    cd "${LOCAL_REPO}"
+    git fetch --all
+    git reset --hard origin/master
+
+    printf "%s" "${NC}"
+
+    return "${SUCCESS}"
+}
+
+sort_tools()
+{
+    arg_dir=$1
+
+    [ -n "${arg_dir}" ] && SORT_TOOLS_DIR=${arg_dir}
+
+    ! [ -d "${SORT_TOOLS_DIR}" ] &&
+        wprintf "[+] Creating %s dir for tools\n" "${SORT_TOOLS_DIR}" &&
+        mkdir -p "${SORT_TOOLS_DIR}"
+
+    pacman -Qgg | grep blackarch |
+    while read -r group tool ; do
+        mkdir -p "${SORT_TOOLS_DIR}/${group##*-}"
+        if ! [ -h "${SORT_TOOLS_DIR}/${group##*-}/${tool}" ]; then
+            ln -s "/usr/share/${tool}" "${SORT_TOOLS_DIR}/${group##*-}/"
+            wprintf "[+] %s tool added to %s group" "${tool}" "${group##*-}"
+        fi
+    done
+
+    wprintf "\n[+] Done!"
+
+    return "${SUCCESS}"
+}
+# parse command line options
+get_opts()
+{
+    while getopts s:i:g:alp:uhD:fvVH flags
+    do
+        case ${flags} in
+            s)
+                opt_mode="search"
+                opt_arg=${OPTARG}
+                ;;
+            i)
+                opt_mode="install_pkg"
+                opt_arg=${OPTARG}
+                ;;
+            g)
+                opt_mode="install_group"
+                opt_arg=${OPTARG}
+                ;;
+            a)
+                opt_mode="install_all"
+                ;;
+            l)
+                opt_mode="list_groups"
+                ;;
+            p)
+                opt_mode="list_pkgs_from_group"
+                opt_arg=${OPTARG}
+                ;;
+            #u)
+            #    opt_mode="update_system"
+            #    opt_arg=${OPTARG}
+            #    ;;
+            u)
+                opt_mode="update_repo"
+                ;;
+            h)
+                opt_mode="sort_tools"
+                ;;
+            D)
+                opt_arg=${OPTARG}
+                ;;
+            f)
+                FORCE="true"
+                ;;
+            v)
+                VERBOSE="/dev/stdout"
+                ;;
+            V)
+                printf "%s\n" "${VERSION}"
+                exit "${SUCCESS}"
+                ;;
+            H)
+                ;;
+            *)
+                cri "WTF?! mount /dev/brain"
+                ;;
+        esac
+    done
+
+    return "${SUCCESS}"
+}
+
+
+# controller and program flow
+main()
+{
+    banner
+    check_argc ${*}
+    get_opts ${*}
+    check_args ${*}
+    check_init
+    check_env
+
+    case "${opt_mode}" in
+        "search")
+            search "${opt_arg}"
+            ;;
+        "install_pkg")
+            install_pkg "${opt_arg}"
+            ;;
+        "install_group")
+            install_group "${opt_arg}"
+            ;;
+        "install_all")
+            install_all
+            ;;
+        "update_repo")
+            update_repo
+            ;;
+        "list_groups")
+            list_groups
+            ;;
+        "list_pkgs_from_group")
+            list_pkgs_from_group "${opt_arg}"
+            ;;
+        "sort_tools")
+            sort_tools "${opt_arg}"
+            ;;
+        *)
+            usage
+            ;;
+    esac
+    return "${SUCCESS}"
+}
+
+
+# program start
+main ${*}
+
+# EOF
+
+]]></content>
+	<tabTrigger>blackman</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

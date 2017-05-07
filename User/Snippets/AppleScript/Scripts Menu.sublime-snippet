@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+tell application "Script Debugger"
+  set theFolder to scripts menu folder
+end tell
+
+tell application "Finder"
+  activate
+  open theFolder
+end tell
+]]></content>
+    <tabTrigger>scriptsMenu</tabTrigger>
+    <scope>source.applescript</scope>
+</snippet>

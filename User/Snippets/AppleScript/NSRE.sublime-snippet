@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+[[*framework:Foundation]][[*class:NSRegularExpression]]'s regularExpressionWithPattern:[[template:thePattern]] [[*piped:options]]:0 |error|:[[template:missing_value_or_reference]]
+]]></content>
+	<tabTrigger>NSRE</tabTrigger>
+	<scope>source.applescript</scope>
+</snippet>

@@ -1,0 +1,122 @@
+<snippet>
+    <content><![CDATA[
+#! perl
+
+# Check command line argument(s)
+if ( $ARGV[0] ) {
+  if ( $ARGV[0] =~ m/^DEBUG$/i ) {
+    $debugmode = true;
+  } else {
+    Syntax();
+  }
+}
+
+# # # # # # # # # # # # # # # # # # # # # #
+# Get the manufacturer info from the BIOS #
+# # # # # # # # # # # # # # # # # # # # # #
+$info = getinfo( "FF00:0000", "FF00:0080" );
+if ( !$info ) {
+  $info = getinfo( "FFF0:0000", "FFF0:0080" );
+}
+
+# Display the result
+print "\nBIOS manufacturer :   $info\n";
+
+# # # # # # # # # # #
+# Get the BIOS date #
+# # # # # # # # # # #
+
+# Create a new temporary DEBUG script to retrieve the BIOS date
+createdbg( "FFFF:0005 L 8" );
+
+# Run DEBUG script and filter output;
+# improved DEBUG output filtering by Uri "Talentix"
+`debug.exe < biosinfo.dbg` =~ /(\d\d\/\d\d\/\d\d)/;
+print "BIOS date         :   ".$1."\n";
+
+# Delete temporary DEBUG script
+`DEL biosinfo.dbg >NUL 2>&1`;
+
+
+# Create temporary DEBUG script
+sub createdbg {
+  my $dbg = "D @_[0]\nQ\n";
+  open( DBGSCR, "> biosinfo.dbg" ) || die( "Cannot open temporary DEBUG script: $!" );
+  print DBGSCR $dbg;
+  close DBGSCR;
+}
+
+
+# Try to read relevant info from BIOS at specified address
+sub getinfo {
+  # Parse arguments
+  my $adr0 = @_[0];
+  my $adr1 = @_[1];
+
+  # Create temporary DEBUG script
+  createdbg( "$adr0\nD $adr1" );
+
+  # Run DEBUG script and store output in array
+  my @biosdbg = `debug.exe < biosinfo.dbg`;
+
+  # Debugging info
+  if ( $debugmode ) {
+    foreach ( @biosdbg ) {
+      print $_."\n";
+    }
+  }
+
+  # Concatenate relevant parts of screen output into one single line
+  my $line = "";
+  foreach ( @biosdbg ) {
+    chomp $_;
+    $line = $line.substr( $_, 61 );
+    if ( $debugmode ) {
+      print substr( $_, 61 )."\n";
+    }
+  }
+
+  # Debugging info
+  if ( $debugmode ) {
+    print "$line\n";
+  }
+
+  # Use some regular expressions to tidy up the output before display
+  # Modify the minimum required length of the resulting string if necessary
+  my $minlength = 7;
+  if ( $line =~ m/\.([^.!?\*\+]{$minlength,})\./ ) {
+    $line = $1;
+    while ( $line =~ m/\.([^.]+$line[^.]*)\./ ) {
+      $line = $1;
+    }
+  } else {
+    $line = "";
+  }
+
+  # Strip leading whitespace
+  $line =~ s/^\s+//;
+
+  # Return the resulting string
+  return $line;
+}
+
+
+# Display help
+sub Syntax {
+  print "\nBIOSInfo.pl,  Version 1.10 for DOS, Windows & OS/2\n",
+    "Display BIOS manufacturer and date\n\n",
+    "Usage:  BIOSINFO.PL  [ DEBUG ]\n\n",
+    "Where:  \"DEBUG\" will display intermediate ",
+    "results for debugging purposes.\n\n",
+    "This script uses DEBUG.EXE to read the information from BIOS.\n",
+    "Tested in Windows 2000 and XP only.\n\n",
+    "Written by Rob van der Woude\n",
+    "http://www.robvanderwoude.com\n\n",
+    "Improved DEBUG output filtering by Uri \"Talentix\"\n\n",
+    "Original idea for BIOS date by ComputerHope\n",
+    "http://www.computerhope.com/rdebug.htm\n\n\n";
+}
+]]></content>
+    <!-- <tabTrigger></tabTrigger> -->
+    <scope>source.perl</scope>
+</snippet>

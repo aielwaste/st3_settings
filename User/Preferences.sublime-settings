@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+	"font_face": "Fira Code Medium",
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"DashDoc",
+		"Vintage"
+	],
+	"theme": "Seti_orig.sublime-theme"
+}

@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+#!/usr/bin/env bash
+# Bash Boilerplate
+#
+# $TM_FILEPATH
+#
+# $TM_COPYRIGHT
+#
+# Authors:
+#   $TM_AUTHOR_SIG
+#
+
+set -o errexit
+set -euo pipefail
+set -o nounset
+# set -o xtrace
+IFS=$`\n\t`
+
+# Set magic variables for current file & dir
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+__file="${__dir}/$(basename "${BASH_SOURCE[0]}")"
+__base="$(basename ${__file} .sh)"
+__root="$(cd "$(dirname "${__dir}")" && pwd)"
+
+arg1="${1:-}"
+]]></content>
+	<tabTrigger>header</tabTrigger>
+	<scope>source.shell</scope>
+</snippet>

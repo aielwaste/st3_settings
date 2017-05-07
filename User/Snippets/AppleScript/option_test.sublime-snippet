@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+-- Test if option is held down
+set #~theResult~# to (((NSEvent's modifierFlags()) div (get NSAlternateKeyMask)) mod 2) = 1
+]]></content>
+	<tabTrigger>option_test</tabTrigger>
+	<scope>source.applescript</scope>
+</snippet>

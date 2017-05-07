@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+-- Test if shift is held down
+set #~theResult~# to (((NSEvent's modifierFlags()) div (get NSShiftKeyMask)) mod 2) = 1
+]]></content>
+	<tabTrigger>shift_test</tabTrigger>
+	<scope>source.applescript</scope>
+</snippet>

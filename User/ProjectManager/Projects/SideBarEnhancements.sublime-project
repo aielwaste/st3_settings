@@ -1,0 +1,22 @@
+{
+	"folders":
+	[
+		{
+			"path": "~/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements",
+            "file_include_patterns": [],
+            "folder_include_patterns": [],
+            "file_exclude_patterns": [".git*"],
+            "folder_exclude_patterns": [".git*"],
+            "follow_symlinks": true
+		},
+        {
+            "name": "User",
+            "path": "~/.dotfiles/sublime/User/SideBarEnhancements",
+            "file_include_patterns": [],
+            "folder_include_patterns": [],
+            "file_exclude_patterns": [],
+            "folder_exclude_patterns": [],
+            "follow_symlinks": true
+        }
+	]
+}

@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+    {
+      "name": "${folder",
+      "path": "/etc",
+      "file_include_patterns": [],
+      "folder_include_patterns": [],
+      "file_exclude_patterns": ["*.log","CONTRIBUTING.md",".gitignore"],
+      "folder_exclude_patterns": ["log"],
+      "follow_symlinks": true
+    }
+]]></content>
+  <tabTrigger>project-folder</tabTrigger>
+  <Description>Project Folder skeleton</Description>
+  <scope>text.xml source.sublime-settings</scope>
+</snippet>

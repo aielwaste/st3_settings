@@ -1,0 +1,221 @@
+[
+    // Define your custom Sublime commands here
+    // Format is same as `key bindings` except replace `keys` with `caption`
+    //
+    {
+        "caption": "File: New",
+        "command": "new_file",
+        "args": {
+            "key": "value"
+        }
+    },
+
+    // XML
+    {
+        "caption": "XML: Format",
+        "command": "format_xml"
+    },
+    {
+        "caption": "XML: Tidy XML Lint",
+        "command": "tidy_xml_lint"
+    },
+
+    // Scopes
+    {
+        "caption": "Print Scope List",
+        "command": "print_scope_list"
+    },
+
+    // Lines
+    {
+        "caption": "Line: Reverse Characters",
+        "command": "reverse_characters"
+    },
+
+    // Prettify
+    {
+        "caption": "Format: Prettify",
+        "command": "reg_replace",
+        "args": {
+            "replacements": [
+                "add_space_to_opening_brackets","add_space_to_closing_brackets","remove_space_between_brackets"
+            ]
+        }
+    },
+
+    // Macros
+    {
+        "caption": "Format: Convert Indentation",
+        "command": "run_macro_file",
+        "args": {
+            "file": "res://Packages/User/identation_macro.sublime-macro"
+        }
+    },
+
+    // Macdown
+    {
+        "caption": "MacDown",
+        "command": "macdown"},
+
+    // Terminal
+    {
+        "caption": "Preferences: Terminal Settings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Terminal/Terminal.sublime-settings"
+        }
+    },
+    {
+        "caption": "Preferences: Terminal Settings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Terminal.sublime-settings"
+        }
+	},
+    {
+        "caption": "Preferences: Terminal Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Terminal/Default (Windows).sublime-keymap",
+            "platform": "Windows"
+        }
+	},
+    {
+        "caption": "Preferences: Terminal Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Terminal/Default (OSX).sublime-keymap", 
+            "platform": "OSX"
+        }
+	},
+    {
+        "caption": "Preferences: Terminal Key Bindings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/Terminal/Default (Linux).sublime-keymap", 
+            "platform": "Linux"
+        }
+	},
+    {
+        "caption": "Preferences: Terminal Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (Windows).sublime-keymap", 
+            "platform": "Windows"
+        }
+	},
+    {
+        "caption": "Preferences: Terminal Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (OSX).sublime-keymap", 
+            "platform": "OSX"
+        }
+	},
+    {
+        "caption": "Preferences: Terminal Key Bindings – User",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/User/Default (Linux).sublime-keymap", 
+            "platform": "Linux"
+        }
+	},
+    {
+        "caption": "Terminal: Open",
+        "command": "open_terminal"
+    },
+    {
+        "caption": "Terminal: Open in project folder",
+        "command": "open_terminal_project_folder"
+    },
+    {
+        "caption": "RegReplace: Clean HTML into something nice",
+        "command": "reg_replace",
+        "args": 
+        {
+            "replacements": [
+                "break_lines", "remove_first_line", "replace_amp"
+            ]
+        }
+	},
+    {
+        "caption": "RegReplace: Remove Dangling Commas",
+        "command": "reg_replace",
+        "args":        {
+            "replacements": [
+                "remove_json_dangling_commas"
+            ]
+        }
+	},
+    {
+        "caption": "RegReplace: Remove Trailing (Years)",
+        "command": "reg_replace",
+        "args": {
+            "replacements": [
+                "remove_trailing_year_in_parenthesis"
+            ]
+        }
+	},
+    // Clear all find highlights
+    {
+        "caption": "RegReplace: Clear Highlights",
+        "command": "reg_replace",
+        "args": {
+            "clear": true
+        }
+    },
+
+    // Edit regular expression rule.
+    {
+        "caption": "RegReplace: Edit Regular Expression Rule",
+        "command": "reg_replace_edit_regex"
+    },
+
+    // Create regular expression rule.
+    {
+        "caption": "RegReplace: Create New Regular Expression Rule",
+        "command": "reg_replace_edit_regex",
+        "args": {
+            "new": true
+        }
+    },
+
+    // Delete regular expression rule.
+    {
+        "caption": "RegReplace: Delete Regular Expression Rule",
+        "command": "reg_replace_delete_regex"
+    },
+
+    // Show the regular expression rule edit panel.
+    {
+        "caption": "RegReplace: Show Edit Panel",
+        "command": "reg_replace_show_edit_panel"
+    },
+    {
+        "caption": "Preferences: RegReplace Settings – Default",
+        "command": "open_file",
+        "args": {
+            "file": "${packages}/RegReplace/reg_replace.sublime-settings"
+        }
+    },
+    {
+        "caption": "Preferences: RegReplace Settings – User",
+        "command": "open_file",
+        "args": { 
+            "file": "${packages}/User/reg_replace.sublime-settings"
+        }
+    },
+    {
+        "caption": "Preferences: RegReplace Commands – Default",
+        "command": "open_file",
+        "args": { "file": "${packages}/RegReplace/Default.sublime-commands"
+    }
+    },
+    {
+        "caption": "Preferences: RegReplace Commands – User",
+        "command": "open_file",
+        "args": { 
+            "file": "${packages}/User/Default.sublime-commands"
+        }
+    }
+]

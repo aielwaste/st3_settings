@@ -1,0 +1,7 @@
+// These settings override both User and Default settings for the Sublime Snippet (Raw) syntax
+{
+  "extensions": [
+    "sublime-snippet"
+  ],
+  "tab_size": 2,
+}

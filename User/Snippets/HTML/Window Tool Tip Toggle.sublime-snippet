@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[
+;
+; AutoHotkey Version: 1.x
+; Language:       English
+; Platform:       Win9x/NT
+; Author:         A.N.Other <myemail@nowhere.com>
+;
+; Script Function:
+; Template script (you can customize this template by editing "ShellNew\Template.ahk" in your Windows folder)
+;
+
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+RegRead, ToolTip, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, ShowInfoTip
+
+If ToolTip = 1
+{
+  MsgBox,4 ,ToolTip Status, ToolTips are on!  Deactivate?
+  IfMsgBox Yes
+	{
+    RegWrite, REG_DWORD, HKEY_CURRENT_USER
+      , Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+      , ShowInfoTip, 0
+    MsgBox, ,ToolTip Status, ToolTips are off! Restart or logoff to disable!
+	}
+}
+If ToolTip = 0
+{
+  MsgBox,4 ,ToolTip Status, ToolTips are off!  Activate?
+  IfMsgBox Yes
+	{
+    RegWrite, REG_DWORD, HKEY_CURRENT_USER
+      , Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+      , ShowInfoTip, 1
+    MsgBox, ,ToolTip Status, ToolTips are on! Restart or logoff to enable!
+	}
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>WinToolTipToggle</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.ahk</scope>
+</snippet>

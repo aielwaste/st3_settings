@@ -1,0 +1,18 @@
+{
+  "Mailboxs": [
+    {
+      "identity": "andrewbell8@gmail.com",
+      "authentication": "oauth",
+
+      "parameters": {
+        "name": "Andrew Bell",
+        "signature": "--XX",
+        "client_id": "1020877628691-ce62e9glep58j5brnc4bbfj54iefsltj.apps.googleusercontent.com",
+        "client_secret": "Ok2ycMPj1d_nk7Ejbh-wEKWY",
+        "tls": "yes",
+        "default": "yes"
+      }
+    }
+  ],
+  "List Period": 4
+}

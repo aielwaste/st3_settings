@@ -1,0 +1,41 @@
+// Sublime Text 3 : macro to copy from curser to the beginning of the current line.
+// (C) Lilian Besson, 2016.
+// Thanks to Thibault Groueix for the request and suggestion.
+// See http://perso.crans.org/besson/publis/ST3/ for more ST3 build systems!
+// and http://docs.sublimetext.info/en/latest/extensibility/macros.html for the doc on ST3 build system.
+[
+  {
+    "command": "set_mark",
+    "args": null
+  },
+  {
+    "command": "move_to",
+    "args":
+    {
+      "extend": false,
+      "to": "bol"
+    }
+  },
+  {
+    "command": "move_to",
+    "args":
+    {
+      "extend": false,
+      "to": "bol"
+    }
+  },
+  {
+    "command": "select_to_mark",
+    "args": null
+  },
+  {
+    "command": "copy",
+    "args": null
+  },
+  {
+    "command": "clear_bookmarks",
+    "args": {
+      "name": "mark"
+    }
+  }
+]

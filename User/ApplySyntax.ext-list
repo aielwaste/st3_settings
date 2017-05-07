@@ -1,0 +1,104 @@
+{
+	"EditorConfig":
+	[
+		"editorconfig"
+	],
+	"GenericConfig":
+	[
+		"conf",
+		"desktop",
+		"directory",
+		"gitattributes",
+		"list",
+		"network"
+	],
+	"HTML (Rails)":
+	[
+		"html.erb"
+	],
+	"INI":
+	[
+		".gitattributes",
+		".gitconfig",
+		".gitignore",
+		".npmrc",
+		"ini.dist"
+	],
+	"JSON":
+	[
+		".bowerrc",
+		".csslintrc",
+		".eslintrc",
+		".jscsrc",
+		".jshintrc",
+		"geojson"
+	],
+	"Makefile":
+	[
+		"Make.common",
+		"Makefile"
+	],
+	"PHP":
+	[
+		"inc",
+		"php3",
+		"php4",
+		"php5",
+		"phtml"
+	],
+	"Property List":
+	[
+		"plist"
+	],
+	"Python":
+	[
+		"py3",
+		"pyw"
+	],
+	"Ruby":
+	[
+		"gemrc",
+		"jbuilder",
+		"podspec",
+		"rabl",
+		"rake",
+		"rb",
+		"simplecov",
+		"thor"
+	],
+	"Ruby Haml":
+	[
+		"haml"
+	],
+	"Sublime Macros":
+	[
+		"sublime-macros"
+	],
+	"Sublime Mouse Map":
+	[
+		"sublime-mousemap"
+	],
+	"Sublime Text Syntax Definition":
+	[
+		"sublime-syntax"
+	],
+	"TextMate Preferences":
+	[
+		"tmPreferences"
+	],
+	"TextMate Syntax Definition (JSON)":
+	[
+		"JSON-tmLanguage"
+	],
+	"TextMate Syntax Definition (YAML)":
+	[
+		"YAML-tmLanguage"
+	],
+	"YAML":
+	[
+		".gemrc",
+		"YAML-tmLanguage",
+		"yml",
+		"yml.dist"
+	]
+}

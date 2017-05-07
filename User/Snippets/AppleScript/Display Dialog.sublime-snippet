@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[
+display dialog "[[template:message]]" buttons {[[template:"Cancel", "OK"]]} default button [[template:"OK"]]
+]]></content>
+    <tabTrigger>ddialog</tabTrigger>
+    <scope>source.applescript</scope>
+</snippet>

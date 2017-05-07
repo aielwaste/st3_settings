@@ -1,0 +1,10 @@
+<snippet>
+	<!-- Type `span-columns` and hit tab to output the span-columns() mixin. -->
+	<!-- The cursor will be placed inside of the mixin's parenthesis for ease of entering a column size. -->
+	<content><![CDATA[
+@include span-columns(${1:8});
+]]></content>
+	<tabTrigger>span-columns</tabTrigger>
+	<description>Set a column width using Neat</description>
+	<scope>source.scss</scope>
+</snippet>

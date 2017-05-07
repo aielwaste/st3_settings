@@ -1,0 +1,179 @@
+{
+    "format": "3.0",
+    "replacements": 
+    {
+        "break_lines": 
+        {
+            "find": "(<li class=\"card card-user)",
+            "replace": "\\n\\1",
+            "greedy": true
+        },
+        "remove_first_line": 
+        {
+            "find": "^<ul class.*\\n",
+            "replace": "",
+            "greedy": true
+        },
+        "remove_trailing_year_in_parenthesis": 
+        {
+            "find": "[\\s]\\((.+?)\\)$",
+            "replace": "",
+            "greedy": true
+        },
+        "replace_amp": 
+        {
+            "find": "&",
+            "replace": "and",
+            "greedy": true
+        },
+        "html5_remove_deprecated_type_attr": 
+        {
+            "find": "(?i)(<(style|script)[^>]*)\\stype=(\"|')text/(css|javascript)(\"|')([^>]*>)",
+            "replace": "\\1\\6",
+            "greedy": true
+        },
+        "remove_json_dangling_commas": 
+        {
+            "find": ",([\\r\\n\\s]*)(\\]|\\})",
+            "replace": "\\1\\2",
+            "greedy": true,
+            "scope_filter": ["-string", "-comment"]
+        },
+        "remove_html_comments": 
+        {
+            "find": "<!--[\\s\\S]+?-->",
+            "replace": "",
+            "scope_filter": ["!comment"],
+            "greedy": true
+        },
+        "remove_trailing_spaces": 
+        {
+            "find": "[ \\t]+$",
+            "replace": "",
+            "greedy": true
+        },
+        "remove_comments": 
+        {
+            "scope": "comment",
+            "find": "([^\\n\\r]+)",
+            "replace": "",
+            "greedy": true
+        },
+        "non_ascii_chars": 
+        {
+            "find": "[[:^ascii:]]+"
+        },
+        "brackets_html": 
+        {
+            "find": "()()"
+        },
+        "swap_quotes_to_single": 
+        {
+            "scope": "string",
+            "find": "^\"(.*?)\"$",
+            "replace": "'\\`'",
+            "greedy_replace": false
+        },
+        "escape_single_quotes": 
+        {
+            "scope": "string",
+            "find": "^(\".*?(?<!\\\\))((?:\\\\]{2})*)'(.*?\")$",
+            "replace": "\\`\\2\\'\\3",
+            "greedy_replace": false,
+            "multi_pass_regex": true
+        },
+        "unescape_quotes_double": 
+        {
+            "scope": "string",
+            "find": "^('.*?(?<!\\\\))((?:\\\\]{2})*)\\\\\"(.*?')$",
+            "replace": "\\`\\2\"\\3",
+            "greedy_replace": false,
+            "multi_pass_regex": true
+        },
+        "swap_quotes_to_double": 
+        {
+            "scope": "string",
+            "find": "^'(.*?)'$",
+            "replace": "\"\\`\"",
+            "greedy_replace": false
+        },
+        "escape_double_quotes": 
+        {
+            "scope": "string",
+            "find": "^('.*?(?<!\\\\))((?:\\\\]{2})*)\"(.*?')$",
+            "replace": "\\`\\2\\\"\\3",
+            "greedy_replace": false,
+            "multi_pass_regex": true
+        },
+        "unescape_single_quotes": 
+        {
+            "scope": "string",
+            "find": "^(\".*?(?<!\\\\))((?:\\\\]{2})*)\\\\'(.*?\")$",
+            "replace": "\\`\\2'\\3",
+            "greedy_replace": false,
+            "multi_pass_regex": true
+        },
+        "remove_empty_lines": 
+        {
+            "find": "^ \\t]*$\\r?\\n",
+            "replace": "",
+            "scope_filter": ["!comment"],
+            "greedy": true,
+            "case": true
+        },
+        "batch_comments": 
+        {
+            "find": "((?:^)?^\\S\\r\\n]*)(::^\\r\\n]*)",
+            "replace": "",
+            "scope_filter": ["comment", "-string"]
+        },
+        "batch_consecutive_single_comments": 
+        {
+            "find": "((?:^\\S\\r\\n]*::^\\r\\n]*(?:\\r\\n])?)*)(^\\S\\r\\n]*::^\\r\\n]*)",
+            "replace": "",
+            "scope_filter": ["comment", "-string"]
+        },
+        "c_comments": 
+        {
+            "find": "((?:^)?^\\S\\r\\n]*)(//^\\r\\n]*)",
+            "replace": "",
+            "scope_filter": ["comment", "-string"]
+        },
+        "c_consecutive_single_comments": 
+        {
+            "find": "((?:^\\S\\r\\n]*//^\\r\\n]*(?:\\r\\n])?)*)(^\\S\\r\\n]*//^\\r\\n]*)",
+            "replace": "",
+            "scope_filter": ["comment", "-string"]
+        },
+        "c_multi_line_comments": 
+        {
+            "find": "((?:^)?^\\S\\r\\n]*)/(\\*(\\w\\W]*?)\\*/)(^\\S\\r\\n]*)",
+            "replace": " ",
+            "scope_filter": ["comment", "-string"]
+        },
+        "python_comments": 
+        {
+            "find": "((?:^)?^\\S\\r\\n]*)(#^\\r\\n]*)",
+            "replace": "",
+            "scope_filter": ["comment", "-string"]
+        },
+        "python_consecutive_single_comments": 
+        {
+            "find": "((?:^\\S\\r\\n]*#^\\r\\n]*(?:\\r\\n])?)*)(^\\S\\r\\n]*#^\\r\\n]*)",
+            "replace": "",
+            "scope_filter": ["comment", "-!string"]
+        },
+        "python_multi_line_double_block_strings": 
+        {
+            "find": "((?:^)?^\\S\\r\\n]*)(\"\"\"(\\w\\W]*?)\"\"\")(^\\S\\r\\n]*)",
+            "replace": " ",
+            "scope_filter": ["-comment", "string.quoted.double.block.python"]
+        },
+        "python_multi_line_single_block_strings": 
+        {
+            "find": "((?:^)?^\\S\\r\\n]*)('''(\\w\\W]*?)''')(^\\S\\r\\n]*)",
+            "replace": " ",
+            "scope_filter": ["-comment", "string.quoted.single.block.python"]
+        }
+    }
+}

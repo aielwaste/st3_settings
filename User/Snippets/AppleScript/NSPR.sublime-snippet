@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+[[*framework:Foundation]][[*class:NSPredicate]]'s predicateWithFormat:[[template:formatString]] argumentArray:[[template:argList]]
+]]></content>
+	<tabTrigger>NSPR</tabTrigger>
+	<scope>source.applescript</scope>
+</snippet>

@@ -1,0 +1,99 @@
+[
+  // Text Transformation
+  { "keys": ["super+k", "super+t"], "command": "title_case" },
+  // Advanced New File Package
+  { "keys": ["super+alt+n"], "command": "advanced_new_file_new"},
+  { "keys": ["shift+super+alt+n"], "command": "advanced_new_file_new", "args": {"is_python": true}},
+  {
+    "keys": ["tab"],
+    "command": "insert",
+    "args": {"characters": "\t"},
+    "context": [{
+      "key": "setting.anf_panel"
+    }]
+  },
+
+  // DashDoc Package
+  { "keys": ["ctrl+alt+d"], "command": "dash_doc"},
+  { "keys": ["shift+ctrl+alt+d"], "command": "dash_doc", "args": { "flip_syntax_sensitive": true } },
+
+  // Replace with Panel
+  { "keys": ["ctrl+h"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+
+  // PlainTasks packages
+  { "keys": ["super+d"], "command": "plain_tasks_complete","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["ctrl+c"], "command": "plain_tasks_cancel", "context": [{"key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["super+enter"], "command": "plain_tasks_new","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["super+i"], "command": "plain_tasks_new","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["super+shift+enter"], "command": "plain_tasks_new_with_date","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["super+shift+a"], "command": "plain_tasks_archive","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["super+shift+o"], "command": "plain_tasks_archive_org","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["super+shift+u"], "command": "plain_tasks_open_url","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["ctrl+o"], "command": "plain_tasks_open_link","context": [{ "key": "selector", "operator": "equal", "operand": "text.todo" }] },
+  { "keys": ["tab"], "command": "plain_task_insert_date", "context":
+    [
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "selector", "operator": "equal", "operand": "text.todo" },
+      { "key": "preceding_text", "operator": "regex_contains", "operand": "(@started|@toggle|@created)(?!\\([\\d\\w,\\.:\\-\/ @]*\\))", "match_all": true }
+    ]
+  },
+  { "keys": ["tab"], "command": "plain_tasks_replace_short_date", "context":
+    [
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "selector", "operator": "equal", "operand": "text.todo" },
+      { "key": "preceding_text", "operator": "regex_contains", "operand": "@due\\([^\\)]+(?!.*?\\))", "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "[ \t]*\\)", "match_all": true }
+    ]
+  },
+  { "keys": ["tab"], "command": "plain_tasks_re_calculate_time_for_tasks", "context":
+    [
+      { "key": "selector", "operator": "equal", "operand": "text.todo meta.tag.todo.completed, text.todo meta.tag.todo.cancelled" }
+    ]
+  },
+
+  // Gmail Package
+  { "keys": [ "shift+super+m" ], "command": "mail_write", "args": {} },
+  { "keys": [ "shift+super+enter" ], "command": "mail_send", "args": {} },
+
+  // Macdown
+  { "keys": ["super+alt+m"], "command": "macdown" },
+
+  // Syntax Fold
+  // Fold all code blocks
+  { "keys": ["alt+0", "alt+0"], "command": "fold_all" },
+
+  // Unfold all code blocks
+  { "keys": ["alt+shift+0", "alt+shift+0"], "command": "unfold_all"},
+
+  // Fold current code blocks
+  { "keys": ["alt+1", "alt+1"], "command": "fold_current"},
+
+  // Unfold current code blocks
+  { "keys": ["alt+shift+1", "alt+shift+1"], "command": "unfold_current"},
+
+  // XML Lint
+  { "keys": ["ctrl+shift+x"], "command": "tidy_xml_lint" }, { "keys": ["ctrl+shift+j"], "command": "prettify_json" },
+  
+  // Logging snippets
+  // JavaScript
+  { "keys": ["alt+shift+l"],
+    "command": "insert_snippet",
+    "args": {
+      "contents": "console.${1:log}(${2:}${SELECTION/;//g});${0}"
+    },
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "source.js", "match_all": true }
+    ]
+  },
+
+  // Objective-C
+  { "keys": ["alt+shift+l"],
+    "command": "insert_snippet",
+    "args": {
+      "contents": "NSLog(@\"${1:%@}\"${1/.*(%\\S+).*|(.+)/(?1:, )/}${2:${SELECTION/;//g}});\n${0}"
+    },
+    "context": [
+      { "key": "selector", "operator": "equal", "operand": "source.objc", "match_all": true }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+# replace every occurence of a file (zsh and bash)
+for f in */include/dbcommon.php; do;
+  cp dbcommon.php $f; 
+done
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>replace-every-occurance-of-file</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.shell</scope>
+</snippet>

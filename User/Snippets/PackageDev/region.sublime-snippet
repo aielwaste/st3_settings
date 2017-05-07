@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+////region ${1:region}
+	$0
+////endregion $1
+]]></content>
+	<tabTrigger>region</tabTrigger>
+	<description>Syntax Fold Region Template</description>
+	<scope>source.sublime-settings,source.json</scope>
+</snippet>
