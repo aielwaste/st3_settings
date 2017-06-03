@@ -76,7 +76,6 @@
 	],
 	"in_process_packages":
 	[
-		"DashDoc"
 	],
 	"install_missing": true,
 	"install_prereleases":
@@ -87,7 +86,6 @@
 	[
 		"Animate.css Snippets",
 		"ApplySyntax",
-		"AVM2 Pcode Syntax Highlighting",
 		"BBCode Syntax",
 		"C# Compile & Run",
 		"C# Snippets",
@@ -112,14 +110,17 @@
 		"HTML5",
 		"Indent XML",
 		"INI",
+		"Inline Google Translate",
 		"InsertDate",
 		"IPython Notebook",
+		"JavaScript Ultimate",
 		"JSON Reindent",
 		"JSONComma",
 		"Local Packages",
 		"MarkdownEditing",
 		"More Python Completions",
 		"Nodejs",
+		"OverrideAudit",
 		"Package Control",
 		"Package Snippets",
 		"PackageDev",
@@ -156,7 +157,6 @@
 		"SublimeLinter-shellcheck",
 		"SublimeLinter-xmllint",
 		"SublimeREPL",
-		"Sublimerge 3",
 		"SuperSelect",
 		"SyntaxFold",
 		"SyntaxManager",

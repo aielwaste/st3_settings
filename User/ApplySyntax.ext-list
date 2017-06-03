@@ -24,15 +24,6 @@
 		".npmrc",
 		"ini.dist"
 	],
-	"JSON":
-	[
-		".bowerrc",
-		".csslintrc",
-		".eslintrc",
-		".jscsrc",
-		".jshintrc",
-		"geojson"
-	],
 	"Makefile":
 	[
 		"Make.common",
