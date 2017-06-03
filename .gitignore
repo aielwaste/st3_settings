@@ -2,8 +2,10 @@
 # ----------------------------------------------------------------------------------------------
 .DS_Store
 .homebrew
+
 # Thumbnails
 ._*
+
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
@@ -62,6 +64,10 @@ Session.vim
 # Sublime Text
 #
 
+QuickMail.cache/
+Haxe.cache/
+Package Control.cache/
+Package Control.ca-certs/
 *.last-run
 *.ca-list
 *.ca-bundle
@@ -70,6 +76,4 @@ Session.vim
 *.merged-ca-bundle
 *.user-ca-bundle
 *.tmTheme
-Package Control.cache/
-Package Control.ca-certs/
 *.sublime-workspaces
