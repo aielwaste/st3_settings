@@ -76,4 +76,6 @@ Package Control.ca-certs/
 *.merged-ca-bundle
 *.user-ca-bundle
 *.tmTheme
+*.sublime-project
 *.sublime-workspaces
+recent.json
