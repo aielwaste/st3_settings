@@ -53,6 +53,7 @@
     ],
     "bold_folder_labels": true,
     "close_windows_when_empty": true,
+    "caret_style": "phase",
     "caret_extra_top": 3,
     "caret_extra_bottom": 3,
     "caret_extra_width": 2,
