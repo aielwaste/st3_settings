@@ -49,7 +49,6 @@
     ],
     "bold_folder_labels": true,
     "close_windows_when_empty": true,
-    "color_scheme": "Packages/User/SublimeLinter/3024 Night (SL).tmTheme",
     "elementary_dark_bottombar": true,
     "elementary_dark_statusbar": true,
     "email_account_default_identities":
@@ -99,6 +98,5 @@
     "shell_exec_title": "Shell Exec",
     "show_encoding": true,
     "show_full_path": true,
-    "show_line_endings": true,
-    "theme": "Seti_orig.sublime-theme"
+    "show_line_endings": true
 }
