@@ -1,95 +1,104 @@
-{	
-	"Linux":
-	{
-		"font_face": "FuraCode Nerd Font",
-		"font_options":
-		[
-			"subpixel_antialias",
-			"gray_antialias"
-		],
-		"font_size": 10,
-		"tab_size": 4,
-        "translate_tabs_to_spaces": true
-	},
-	"OSX":
-	{
-		"font_face": "FiraCode-Medium",
-		"font_options":
-		[
-			"subpixel_antialias"
-		],
-		"font_size": 14,
-		"tab_size": 4
-	},
-	"additional_path_items":
-	[
-		"~/bin",
-		"/usr/local/libexec/gnubin",
-		"~/.pyenv/shim",
-		"~/.pyenv/shims/bin",
-		"~/.rbenv/shim",
-		"~/.rbenv/shims/bin",
-		"~/.nodenv/shims",
-		"~/.nodenv/shims/bin",
-		"~/.platform_settings",
-		"/usr/local/bin",
-		"/usr/local/opt/go/libexec/bin"
-	],
-	"bold_folder_labels": true,
-	"close_windows_when_empty": true,
-	"color_scheme": "Packages/User/SublimeLinter/3024 Night (SL).tmTheme",
-	"elementary_dark_bottombar": true,
-	"elementary_dark_statusbar": true,
-	"email_account_default_identities":
-	[
-		"Andrew Bell <andrewbell8@gmail.com>",
-		"Andrew Bell <a.bell@vivaldi.net",
-		"Andrew Bell <bell.andrew@icloud.com",
-		"Andrew Bell <fr1volous@icloud.com>",
-		"Andrew Bell <a.j.bell@outlook.com",
-		"Andrew Bell <fr1volous@outlook.com",
-		"Andrew Bell <bell.andrew@zoho.com"
-	],
-	"email_account_default_identity": "Andrew Bell <andrewbell8@gmail.com>",
-	"email_account_default_imap": "imaps://andrewbell8:@RESn0code@imap.gmail.com:993",
-	"email_account_default_smtp": "smtp+tls://andrewbell8:@RESn0code@smtp.gmail.com:465",
-	"email_accounts":
-	[
-		"andrewbell8@gmail.com"
-	],
-	"font_face": "FiraCode-Medium",
-	"font_size": 11,
-	"highlight_line": true,
-	"ignored_packages":
-	[
-		"cffi",
-		"HTML",
-		"JavaScript",
-		"ScopeAlways",
-		"Vintage"
-	],
-	"indent_guide_options":
-	[
-		"draw_normal",
-		"draw_active"
-	],
-	"overlay_scroll_bars": "enabled",
-	"platform_settings_keys":
-	[
-		"Linux",
-		"OSX",
-		"Windows"
-	],
-	"shell_exec_context": "project_folder",
-	"shell_exec_debug": false,
-	"shell_exec_executable": "/usr/bin/zsh",
-	"shell_exec_executable_option": "--login",
-	"shell_exec_output": "file",
-	"shell_exec_output_syntax": "Ruby",
-	"shell_exec_output_word_wrap": true,
-	"shell_exec_title": "Shell Exec",
-	"show_encoding": true,
-	"show_full_path": true,
-	"show_line_endings": true,
-	"theme": "Seti_orig.sublime-theme"
+{   
+    "Linux":
+    {
+        "font_face": "FuraCode Nerd Font",
+        "font_options":
+        [
+            "subpixel_antialias",
+        ],
+        "font_size": 11,
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "highlight_line": true
+    },
+    "OSX":
+    {
+        "font_face": "FiraCode-Medium",
+        "font_options":
+        [
+            "subpixel_antialias"
+        ],
+        "font_size": 14,
+        "tab_size": 4,
+        "highlight_line": true
+    },
+    "Windows":
+    {
+        "font_face": "Fira Code Medium",
+        "font_options":
+        [
+            "subpixel_antialias",
+            "gray_antialias"
+        ],
+        "font_size": 11,
+        "tab_size": 4,
+        "highlight_line": true
+    },
+    "additional_path_items":
+    [
+        "C:/Users/bin",
+        "/usr/local/libexec/gnubin",
+        "/usr/local/bin",
+        "/usr/bin",
+        "~/bin",
+        "~/.pyenv/shims",
+        "G:\\Src\\Python\\Python33",
+        "G:\\Src\\Python\\Python36",
+        "G:\\Src\\Python\\Python35",
+        "G:\\Src\\Python\\Python27"
+    ],
+    "bold_folder_labels": true,
+    "close_windows_when_empty": true,
+    "color_scheme": "Packages/User/SublimeLinter/3024 Night (SL).tmTheme",
+    "elementary_dark_bottombar": true,
+    "elementary_dark_statusbar": true,
+    "email_account_default_identities":
+    [
+        "Andrew Bell <andrewbell8@gmail.com>",
+        "Andrew Bell <a.bell@vivaldi.net",
+        "Andrew Bell <bell.andrew@icloud.com",
+        "Andrew Bell <fr1volous@icloud.com>",
+        "Andrew Bell <a.j.bell@outlook.com",
+        "Andrew Bell <fr1volous@outlook.com",
+        "Andrew Bell <bell.andrew@zoho.com"
+    ],
+    "email_account_default_identity": "Andrew Bell <andrewbell8@gmail.com>",
+    "email_account_default_imap": "imaps://andrewbell8:@RESn0code@imap.gmail.com:993",
+    "email_account_default_smtp": "smtp+tls://andrewbell8:@RESn0code@smtp.gmail.com:465",
+    "email_accounts":
+    [
+        "andrewbell8@gmail.com"
+    ],
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "indent_guide_options":
+    [
+        "draw_normal",
+        "draw_active"
+    ],
+    "overlay_scroll_bars": "enabled",
+    "platform_settings_keys":
+    [
+        "Linux",
+        "OSX",
+        "Windows"
+    ],
+    "shell_exec_context": "project_folder",
+    "shell_exec_debug": false,
+    "shell_exec_executable": {
+        "default": "/usr/local/bin/zsh",
+        "Linux": "/usr/bin/zsh",
+        "Windows": "C:\\Windows\\System32\\bash.exe"
+    },
+    "shell_exec_executable_option": "--login",
+    "shell_exec_output": "file",
+    "shell_exec_output_syntax": "Ruby",
+    "shell_exec_output_word_wrap": true,
+    "shell_exec_title": "Shell Exec",
+    "show_encoding": true,
+    "show_full_path": true,
+    "show_line_endings": true,
+    "theme": "Seti_orig.sublime-theme"
 }
