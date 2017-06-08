@@ -1,7 +1,7 @@
 {   
     "Linux":
     {
-        "font_face": "FuraCode Nerd Font",
+        "font_face": "Fira Code Medium",
         "font_options":
         [
             "subpixel_antialias",
@@ -20,7 +20,10 @@
         ],
         "font_size": 14,
         "tab_size": 4,
-        "highlight_line": true
+        "translate_tabs_to_spaces": true,
+        "highlight_line": true,
+        "shell_environment": true,
+        "show_full_path": true
     },
     "Windows":
     {
@@ -32,6 +35,7 @@
         ],
         "font_size": 11,
         "tab_size": 4,
+        "translate_tabs_to_spaces": true,
         "highlight_line": true
     },
     "additional_path_items":
@@ -49,8 +53,9 @@
     ],
     "bold_folder_labels": true,
     "close_windows_when_empty": true,
-    "elementary_dark_bottombar": true,
-    "elementary_dark_statusbar": true,
+    "caret_extra_top": 3,
+    "caret_extra_bottom": 3,
+    "caret_extra_width": 2,
     "email_account_default_identities":
     [
         "Andrew Bell <andrewbell8@gmail.com>",
@@ -98,5 +103,13 @@
     "shell_exec_title": "Shell Exec",
     "show_encoding": true,
     "show_full_path": true,
+    "show_line_endings": true,
+    "auto_complete_commit_on_tab": true,
+    "auto_complete_with_fields": true,
+    "shift_tab_unindent": true,
+    "copy_with_empty_selection": false,
+    "auto_find_in_selection": true,
+    "scroll_speed": 2.0,
+    "show_encoding": true,
     "show_line_endings": true
 }
