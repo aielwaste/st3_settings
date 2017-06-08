@@ -1,4 +1,4 @@
-{
+{	
 	"Linux":
 	{
 		"font_face": "FuraCode Nerd Font",
@@ -8,7 +8,8 @@
 			"gray_antialias"
 		],
 		"font_size": 10,
-		"tab_size": 2
+		"tab_size": 4,
+        "translate_tabs_to_spaces": true
 	},
 	"OSX":
 	{
