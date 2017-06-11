@@ -1,15 +1,16 @@
-{   
+{
     "Linux":
     {
         "font_face": "Fira Code Medium",
         "font_options":
         [
-            "subpixel_antialias",
+            "subpixel_antialias"
         ],
         "font_size": 11,
+        "highlight_line": true,
+        "show_full_path": true,
         "tab_size": 4,
-        "translate_tabs_to_spaces": true,
-        "highlight_line": true
+        "translate_tabs_to_spaces": true
     },
     "OSX":
     {
@@ -19,11 +20,11 @@
             "subpixel_antialias"
         ],
         "font_size": 14,
-        "tab_size": 4,
-        "translate_tabs_to_spaces": true,
         "highlight_line": true,
         "shell_environment": true,
-        "show_full_path": true
+        "show_full_path": true,
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true
     },
     "Windows":
     {
@@ -34,29 +35,34 @@
             "gray_antialias"
         ],
         "font_size": 11,
+        "highlight_line": true,
+        "show_full_path": true,
         "tab_size": 4,
-        "translate_tabs_to_spaces": true,
-        "highlight_line": true
+        "translate_tabs_to_spaces": true
     },
     "additional_path_items":
     [
-        "C:/Users/bin",
-        "/usr/local/libexec/gnubin",
-        "/usr/local/bin",
-        "/usr/bin",
         "~/bin",
-        "~/.pyenv/shims",
-        "G:\\Src\\Python\\Python33",
-        "G:\\Src\\Python\\Python36",
-        "G:\\Src\\Python\\Python35",
-        "G:\\Src\\Python\\Python27"
+        "~/.pyenv/shims"
     ],
+    "auto_complete_commit_on_tab": true,
+    "auto_complete_with_fields": true,
+    "auto_find_in_selection": true,
     "bold_folder_labels": true,
-    "close_windows_when_empty": true,
-    "caret_style": "phase",
-    "caret_extra_top": 3,
+    "match_brackets_angle": true,
+    "default_line_ending": "system",
+    "drag_text": false,
+    "highlight_modified_tabs": true,
     "caret_extra_bottom": 3,
+    "caret_extra_top": 3,
     "caret_extra_width": 2,
+    "create_window_at_startup": true,
+    "indent_to_bracket": true,
+    "caret_style": "phase",
+    "open_files_in_new_window": false,
+    "close_windows_when_empty": true,
+    "color_scheme": "Packages/Seti_UX/Seti.tmTheme",
+    "copy_with_empty_selection": false,
     "email_account_default_identities":
     [
         "Andrew Bell <andrewbell8@gmail.com>",
@@ -74,8 +80,15 @@
     [
         "andrewbell8@gmail.com"
     ],
+    "font_face": "Fira Code Medium",
+    "font_options":
+    [
+        "subpixel_antialias",
+        "gray_antialias"
+    ],
     "ignored_packages":
     [
+        "JavaScript",
         "Vintage"
     ],
     "indent_guide_options":
@@ -90,27 +103,19 @@
         "OSX",
         "Windows"
     ],
+    "scroll_speed": 2.0,
+    "shell_environment": true,
     "shell_exec_context": "project_folder",
     "shell_exec_debug": false,
-    "shell_exec_executable": {
-        "default": "/usr/local/bin/zsh",
-        "Linux": "/usr/bin/zsh",
-        "Windows": "C:\\Windows\\System32\\bash.exe"
-    },
+    "shell_exec_executable": "/usr/bin/zsh",
     "shell_exec_executable_option": "--login",
     "shell_exec_output": "file",
     "shell_exec_output_syntax": "Ruby",
     "shell_exec_output_word_wrap": true,
     "shell_exec_title": "Shell Exec",
+    "shift_tab_unindent": true,
     "show_encoding": true,
     "show_full_path": true,
     "show_line_endings": true,
-    "auto_complete_commit_on_tab": true,
-    "auto_complete_with_fields": true,
-    "shift_tab_unindent": true,
-    "copy_with_empty_selection": false,
-    "auto_find_in_selection": true,
-    "scroll_speed": 2.0,
-    "show_encoding": true,
-    "show_line_endings": true
+    "theme": "SodaSeti Dark 3.sublime-theme"
 }
