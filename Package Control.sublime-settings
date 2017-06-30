@@ -76,7 +76,6 @@
 	],
 	"in_process_packages":
 	[
-		"cffi"
 	],
 	"install_missing": true,
 	"install_prereleases":
@@ -139,6 +138,7 @@
 		"SublimeLinter-xmllint",
 		"SublimeREPL",
 		"SyntaxFold",
+		"Theme - SodaSeti",
 		"udev rules",
 		"url-utils",
 		"XmlDocs",
