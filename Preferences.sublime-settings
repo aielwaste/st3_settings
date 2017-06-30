@@ -1,121 +1,45 @@
 {
-    "Linux":
-    {
-        "font_face": "Fira Code Medium",
-        "font_options":
-        [
-            "subpixel_antialias"
-        ],
-        "font_size": 11,
-        "highlight_line": true,
-        "show_full_path": true,
-        "tab_size": 4,
-        "translate_tabs_to_spaces": true
-    },
-    "OSX":
-    {
-        "font_face": "FiraCode-Medium",
-        "font_options":
-        [
-            "subpixel_antialias"
-        ],
-        "font_size": 14,
-        "highlight_line": true,
-        "shell_environment": true,
-        "show_full_path": true,
-        "tab_size": 4,
-        "translate_tabs_to_spaces": true
-    },
-    "Windows":
-    {
-        "font_face": "Fira Code Medium",
-        "font_options":
-        [
-            "subpixel_antialias",
-            "gray_antialias"
-        ],
-        "font_size": 11,
-        "highlight_line": true,
-        "show_full_path": true,
-        "tab_size": 4,
-        "translate_tabs_to_spaces": true
-    },
-    "additional_path_items":
-    [
-        "~/bin",
-        "~/.pyenv/shims"
-    ],
-    "auto_complete_commit_on_tab": true,
-    "auto_complete_with_fields": true,
-    "auto_find_in_selection": true,
-    "bold_folder_labels": true,
-    "match_brackets_angle": true,
-    "default_line_ending": "system",
-    "drag_text": false,
-    "highlight_modified_tabs": true,
-    "caret_extra_bottom": 3,
-    "caret_extra_top": 3,
-    "caret_extra_width": 2,
-    "create_window_at_startup": true,
-    "indent_to_bracket": true,
-    "caret_style": "phase",
-    "open_files_in_new_window": false,
-    "close_windows_when_empty": true,
-    "color_scheme": "Packages/Seti_UX/Seti.tmTheme",
-    "copy_with_empty_selection": false,
-    "email_account_default_identities":
-    [
-        "Andrew Bell <andrewbell8@gmail.com>",
-        "Andrew Bell <a.bell@vivaldi.net",
-        "Andrew Bell <bell.andrew@icloud.com",
-        "Andrew Bell <fr1volous@icloud.com>",
-        "Andrew Bell <a.j.bell@outlook.com",
-        "Andrew Bell <fr1volous@outlook.com",
-        "Andrew Bell <bell.andrew@zoho.com"
-    ],
-    "email_account_default_identity": "Andrew Bell <andrewbell8@gmail.com>",
-    "email_account_default_imap": "imaps://andrewbell8:@RESn0code@imap.gmail.com:993",
-    "email_account_default_smtp": "smtp+tls://andrewbell8:@RESn0code@smtp.gmail.com:465",
-    "email_accounts":
-    [
-        "andrewbell8@gmail.com"
-    ],
-    "font_face": "Fira Code Medium",
-    "font_options":
-    [
-        "subpixel_antialias",
-        "gray_antialias"
-    ],
-    "ignored_packages":
-    [
-        "JavaScript",
-        "Vintage"
-    ],
-    "indent_guide_options":
-    [
-        "draw_normal",
-        "draw_active"
-    ],
-    "overlay_scroll_bars": "enabled",
-    "platform_settings_keys":
-    [
-        "Linux",
-        "OSX",
-        "Windows"
-    ],
-    "scroll_speed": 2.0,
-    "shell_environment": true,
-    "shell_exec_context": "project_folder",
-    "shell_exec_debug": false,
-    "shell_exec_executable": "/usr/bin/zsh",
-    "shell_exec_executable_option": "--login",
-    "shell_exec_output": "file",
-    "shell_exec_output_syntax": "Ruby",
-    "shell_exec_output_word_wrap": true,
-    "shell_exec_title": "Shell Exec",
-    "shift_tab_unindent": true,
-    "show_encoding": true,
-    "show_full_path": true,
-    "show_line_endings": true,
-    "theme": "SodaSeti Dark 3.sublime-theme"
+	"animation_enabled": false,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 3,
+	"caret_extra_top": 3,
+	"caret_extra_width": 2,
+	"color_scheme": "Packages/Seti_UX/Seti.tmTheme",
+	"font_size": 14,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"JavaScript",
+		"Vintage"
+	],
+	"linux":
+	{
+		"font_face": "Fira Code Medium",
+		"open_files_in_new_window": false,		
+		"font_size": 14.0
+	},
+	"osx":
+	{
+		"font_face": "FiraCode-Medium",
+		"font_size": 14.0,
+		"open_files_in_new_window": false,
+		"shell_environment": true,
+		"show_full_path": true
+	},
+	"overlay_scroll_bars": "enabled",
+	"platform_settings_keys":
+	[
+		"${platform}",
+		"user_${platform}"
+	],
+	"scroll_speed": 2.0,
+	"theme": "SodaSeti Dark 3.sublime-theme",
+	"tree_animation_enabled": false,
+	"windows":
+	{
+		"font_face": "Fira Code Medium",
+		"open_files_in_new_window": false,
+		"font_size": 12.0
+	}
 }
