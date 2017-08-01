@@ -190,6 +190,10 @@
             ]
         },
         {
+            "syntax": "Lua/Lua",
+            "extensions": ["lua","luac"]
+        },
+        {
             "syntax": "ShellScriptImproved/Shell-Unix-Generic",
             "extensions": ["bash","sh","zsh"],
             "rules": [
