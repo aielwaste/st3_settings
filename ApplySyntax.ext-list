@@ -1,11 +1,18 @@
 {
+	"Batch File":
+	[
+		"bat",
+		"cmd"
+	],
 	"EditorConfig":
 	[
 		"editorconfig"
 	],
 	"GenericConfig":
 	[
+		"cfg",
 		"conf",
+		"def",
 		"desktop",
 		"directory",
 		"gitattributes",
@@ -24,6 +31,20 @@
 		".npmrc",
 		"ini.dist"
 	],
+	"JSON":
+	[
+		".bowerrc",
+		".csslintrc",
+		".eslintrc",
+		".jscsrc",
+		".jshintrc",
+		"geojson"
+	],
+	"Lua":
+	[
+		"lua",
+		"luac"
+	],
 	"Makefile":
 	[
 		"Make.common",
@@ -36,6 +57,10 @@
 		"php4",
 		"php5",
 		"phtml"
+	],
+	"PowershellSyntax":
+	[
+		"ps1"
 	],
 	"Property List":
 	[

@@ -1,11 +1,13 @@
 {
 	"extensions":
 	[
-		"conf",
-		"desktop",
-		"directory",
-		"gitattributes",
+		"def",
 		"list",
-		"network"
+		"conf",
+		"cfg",
+		"network",
+		"directory",
+		"desktop",
+		"gitattributes"
 	]
 }

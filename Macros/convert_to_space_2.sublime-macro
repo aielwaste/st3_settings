@@ -1,0 +1,9 @@
+[
+  { "command": "select_all", "args": null, },
+  { "command": "set_setting", "args": { "setting": "tab_size", "value": 4 } },
+  { "command": "unexpand_tabs", "args": { "set_translate_tabs": true } },
+  { "command": "set_setting", "args": { "setting": "tab_size", "value": 2 } },
+  { "command": "unexpand_tabs", "args": { "set_translate_tabs": true } },
+  { "command": "expand_tabs", "args": { "set_translate_tabs": true } },
+  { "command": "reindent", "args": { "single_line": false }}
+]
